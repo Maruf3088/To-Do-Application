@@ -8,11 +8,13 @@ let arr = JSON.parse(localStorage.getItem("taskItem")) || [];
 
 // Function to add HTML for a new task
 const addHtml = (value) => {
+  let i = 1;
+
   const newDiv = document.createElement("div");
   newDiv.classList.add("task");
   newDiv.innerHTML = `
     <div class="task-content">
-      <div class="box"></div>
+     
       <div class="text">${value}</div>
     </div>
     <button class="task-btn btn">Delete</button>
@@ -22,7 +24,6 @@ const addHtml = (value) => {
 
 // Function to add a task
 const addTask = () => {
-  
   let inputValue = input.value;
   if (inputValue !== "") {
     arr.push(inputValue);
@@ -34,13 +35,14 @@ const addTask = () => {
 
 // Function to delete a task
 const deleteTask = (e) => {
+  // console.log(e.target);
   if (e.target.classList.contains("task-btn")) {
     const taskElement = e.target.parentElement;
     const taskText = taskElement.querySelector(".text").innerText;
-    
+
     arr = arr.filter((el) => el !== taskText);
     localStorage.setItem("taskItem", JSON.stringify(arr));
-    
+
     taskElement.remove();
   }
 };

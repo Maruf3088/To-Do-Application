@@ -29,7 +29,6 @@ body {
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 .main-div {
   width: 60%;
@@ -45,6 +44,9 @@ body {
   justify-content: center;
   border-radius: 5px;
 }
+.main-div h1 {
+  color: white;
+}
 .input-div {
   width: 100%;
   display: flex;
@@ -57,60 +59,61 @@ body {
   border: none;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.task-div {
+  /* border: 2px solid red; */
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  height: auto;
+}
+.task-div .task {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 
+  /* height: auto; */
+  /* border: 2px solid red; */
 }
-.task-div{
-    /* border: 2px solid red; */
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    height: auto;
+.task-content {
+  display: flex;
+  /* align-items: center; */
+  gap: 10px;
+  /* height: auto; */
+  margin-top: 10px;
 }
-.task-div .task{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+.task-content .text {
+  font-size: 1.1rem;
+  color: #757575;
+  width: 90%;
+  /* align-self: center; */
+  text-wrap: wrap;
+}
+.box {
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  color: white;
+  border: 1px solid #757575;
+  /* align-self: flex-start; */
+  margin-top: 4px;
+}
+.greenBg {
+  background-color: greenyellow;
+}
+.overline {
+  text-decoration: overline;
+}
 
-    /* height: auto; */
-    /* border: 2px solid red; */
+.task-btn {
+  align-self: flex-start;
 }
-.task-content{
-    display: flex;
-    /* align-items: center; */
-    gap: 10px;
-    /* height: auto; */
-    margin-top: 10px;
-
-}
-.task-content .text{
-   
-    font-size: 1.1rem;
-    color: #757575;
-    width: 90%;
-    /* align-self: center; */
-    text-wrap: wrap;
-  
-}
-.box{
-    width: 20px;
-    height: 20px;
-    border-radius: 2px;
-    color: white;
-    border: 1px solid  #757575;
-    /* align-self: flex-start; */
-    margin-top: 4px;
-}
-.task-btn{
-    align-self: flex-start;
-}
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .main-div {
     width: 80%;
-   
   }
-  
 }
-@media (max-width:600px) {
+@media (max-width: 600px) {
   .main-div {
     width: 100%;
     height: auto;
@@ -130,5 +133,4 @@ body {
     display: flex;
     gap: 10px;
   }
-  
 }
