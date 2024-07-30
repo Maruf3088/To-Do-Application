@@ -22,6 +22,7 @@ const addHtml = (value) => {
 
 // Function to add a task
 const addTask = () => {
+  
   let inputValue = input.value;
   if (inputValue !== "") {
     arr.push(inputValue);
@@ -55,3 +56,8 @@ showTask();
 // Event listeners
 addbtn.addEventListener("click", addTask);
 taskDiv.addEventListener("click", deleteTask);
+input.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    addTask();
+  }
+});
